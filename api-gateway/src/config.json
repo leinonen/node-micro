@@ -1,0 +1,9 @@
+{
+  "server": {
+    "port": 9000
+  },
+  "etcd": {
+    "host": "jack-sparrow.local",
+    "port": "4001"
+  }
+}

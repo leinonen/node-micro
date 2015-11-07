@@ -1,0 +1,14 @@
+{
+  "server": {
+    "port": 8000
+  },
+  "database": {
+    "name": "ProductsDB",
+    "host": "192.168.83.155",
+    "port": 27017
+  },
+  "etcd": {
+    "host": "jack-sparrow.local",
+    "port": "4001"
+  }
+}

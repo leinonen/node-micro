@@ -1,0 +1,21 @@
+{
+  "name": "product-service",
+  "version": "0.0.0",
+  "description": "product micro service",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Peter Leinonen",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "mongoose-q": "^0.1.0",
+    "nconf": "^0.8.2",
+    "node-etcd": "^4.2.1",
+    "node-uuid": "^1.4.3",
+    "winston": "^2.1.0"
+  }
+}

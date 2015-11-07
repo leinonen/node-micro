@@ -1,0 +1,4 @@
+.idea
+api-gateway/src/node_modules
+product-service/src/node_modules
+recommendation-service/src/node_modules
