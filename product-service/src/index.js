@@ -13,11 +13,13 @@ var Etcd = require('node-etcd');
 var etcd = new Etcd(nconf.get('etcd:host'), nconf.get('etcd:port'));
 var uuid = require('node-uuid');
 var serviceId = uuid.v4();
+var os = require('os');
+var hostname = os.hostname();
 
 function getServiceInfo() {
   return {
-    hostname: '127.0.0.1',
-    port: nconf.get('server:port'),
+    hostname: hostname,
+    port: nconf.get('PORT'),
     pid: process.pid,
     name: pkgjson.name,
     version: pkgjson.version
@@ -53,8 +55,8 @@ app.use((err, req, res, next) => {
   res.sendStatus(err.status || 500);
 });
 
-app.listen(nconf.get('server:port'));
-winston.info('%s listening on port %d', pkgjson.name, nconf.get('server:port'));
+app.listen(nconf.get('PORT'));
+winston.info('%s listening on port %d', pkgjson.name, nconf.get('PORT'));
 
 // Register service in etcd
 function etcdRegister() {

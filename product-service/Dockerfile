@@ -9,8 +9,8 @@ WORKDIR /src
 # Install app dependencies
 RUN npm install
 
-# Open Port 80
-EXPOSE 80
+# Open Port 8000
+EXPOSE 8000
 
 # Run Node.js
 CMD ["node", "index.js"]

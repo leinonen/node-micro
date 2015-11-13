@@ -1,7 +1,5 @@
 {
-  "server": {
-    "port": 8000
-  },
+  "PORT": 8000,
   "database": {
     "name": "ProductsDB",
     "host": "192.168.83.155",

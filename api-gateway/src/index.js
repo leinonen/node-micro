@@ -54,5 +54,5 @@ app.use((err, req, res, next) => {
   res.sendStatus(err.status || 500);
 });
 
-app.listen(nconf.get('server:port'));
-winston.info('%s listening on port %d', pkgjson.name, nconf.get('server:port'));
+app.listen(nconf.get('PORT'));
+winston.info('%s listening on port %d', pkgjson.name, nconf.get('PORT'));
