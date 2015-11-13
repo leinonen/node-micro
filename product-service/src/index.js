@@ -44,6 +44,10 @@ app.use(bodyParser.urlencoded({extended: false}));
 // Setup routes
 app.use(require('./routes'));
 
+app.get('/ping', function(req, res) {
+  res.status(200).end();
+});
+
 app.get('/status', function(req, res) {
   var dateStr = new Date().toString();
   winston.info('%s get status', dateStr);

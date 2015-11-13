@@ -1,26 +1,32 @@
-products_service_a:
+producta:
   build: .
-  ports:
-    - "80:8000"
+  expose:
+    - 80
+  environment:
+    - PORT=80
 
-products_service_b:
+productb:
   build: .
-  ports:
-    - "80:8000"
+  expose:
+    - 80
+  environment:
+    - PORT=80
 
-products_service_c:
+productc:
   build: .
-  ports:
-    - "80:8000"
+  expose:
+    - 80
+  environment:
+    - PORT=80
 
 haproxy:
   image: hypriot/rpi-haproxy
   volumes:
-   - haproxy:/haproxy-override
+   - ./haproxy:/haproxy-override
   links:
-   - products_service_a
-   - products_service_b
-   - products_service_c
+   - producta
+   - productb
+   - productc
   ports:
    - "80:80"
    - "70:70"

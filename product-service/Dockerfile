@@ -1,4 +1,4 @@
-FROM hypriot/rpi-node:4.2.1
+FROM hypriot/rpi-node:4.1.2
 
 # Adding source files into container
 ADD src/ /src
@@ -10,7 +10,7 @@ WORKDIR /src
 RUN npm install
 
 # Open Port 8000
-EXPOSE 8000
+#EXPOSE 8000
 
 # Run Node.js
 CMD ["node", "index.js"]
